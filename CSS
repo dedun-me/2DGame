@@ -1,0 +1,325 @@
+/*_________________________Main Div_________________________*/
+
+.d {
+    width: 100%;
+    height: 100vh;
+    background-image: url("background.png");
+    background-size: cover;
+    overflow-x: hidden;
+    position: absolute;
+    background-repeat: repeat-x;
+}
+
+
+/*_________________________Body_________________________*/
+
+.b {
+    margin: 0px;
+}
+
+
+/*_________________________Kunai_________________________*/
+
+.i {
+    height: 25px;
+    margin-top: 490px;
+    position: absolute;
+}
+
+
+/*_________________________Ninja_________________________*/
+
+.boy {
+
+    position: absolute;
+    height: 200px;
+    margin-top: 365px;
+    margin-left: 100px;
+}
+
+
+/*_________________________Score Para_________________________*/
+
+.score {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 900px;
+    color: darkred;
+    font-size: 80px;
+    font-family: "20.000 dollar bail";
+    visibility: hidden;
+}
+
+
+/*_________________________Game Over Window_________________________*/
+
+.end {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.362);
+    font-size: 100px;
+    font-weight: bold;
+    font-family: "Arial";
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+}
+
+
+/*_________________________Play Again button_________________________*/
+
+.btn {
+    width: 400px;
+    height: 50px;
+    font-size: 30px;
+    border-style: solid;
+    font-weight: bold;
+    background-color: rgba(139, 217, 255, 0.5);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/*_________________________Play Again button Hover_________________________*/
+
+.btn:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    transition-duration: 500ms;
+}
+
+
+/*_________________________Start Window_________________________*/
+
+.start {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url("intro.png");
+    background-size: cover;
+    overflow-x: hidden;
+    position: absolute;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: "Arial";
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*_________________________Start button_________________________*/
+
+.btn1 {
+    width: 500px;
+    height: 100px;
+    font-size: 60px;
+    font-weight: bold;
+    background-color: rgba(255, 239, 12, 0.688);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: -500px;
+    color: rgb(255, 255, 255);
+}
+
+.btn1:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    transition-duration: 500ms;
+}
+
+
+/*_________________________Main Top Logo_________________________*/
+
+.logo {
+    height: 250px;
+    position: absolute;
+    margin-left: 650px;
+}
+
+
+/*_________________________Name Assassins_________________________*/
+
+.g1name {
+    position: absolute;
+    margin-left: 460px;
+    margin-top: 40px;
+    font-size: 60px;
+    font-family: "309";
+    color: darkred;
+}
+
+
+/*_________________________Name Blade_________________________*/
+
+.g2name {
+    position: absolute;
+    margin-left: 490px;
+    margin-top: 100px;
+    font-size: 60px;
+    font-family: "309";
+    color: darkred;
+}
+
+
+/*_________________________Blue Background_________________________*/
+
+
+.p1 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+
+/*_________________________Start Name_________________________*/
+
+.startname {
+    font-size: 80px;
+}
+
+
+/*_________________________Help_________________________*/
+
+.help {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-color: rgba(20, 184, 179, 0.878);
+    visibility: hidden;
+}
+
+
+/*_________________________Press Enter_________________________*/
+
+
+.pressenter {
+    position: absolute;
+    font-family: "Arial";
+    color: black;
+    font-size: 100px;
+    margin-left: 280px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/*_________________________Help Jump Img_________________________*/
+
+.jumphelpimg {
+    height: 200px;
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 150px;
+}
+
+/*_________________________Help Kunai Img_________________________*/
+
+.kunaihelpimg {
+    height: 25px;
+    position: absolute;
+    margin-top: 525px;
+    margin-left: 350px;
+}
+
+/*_________________________Help Jump Arrow_________________________*/
+
+.jumparrow {
+    height: 300px;
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 290px;
+}
+
+/*_________________________Help Idle Img_________________________*/
+
+.jumphelpimg1 {
+    height: 200px;
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 600px;
+}
+
+/*_________________________Press Space Para_________________________*/
+
+.pressspace {
+    position: absolute;
+    color: black;
+    font-size: 50px;
+    margin-left: 128px;
+    margin-top: 580px;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+
+/*_________________________Help Main Div_________________________*/
+
+.helpmaindiv {
+    position: absolute;
+    margin-left: -54px;
+    margin-top: -36px;
+}
+
+
+/*_________________________Help Para_________________________*/
+
+.parahelp {
+    position: absolute;
+    font-size: 35px;
+    margin-left: 50px;
+    margin-top: 250px;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+/*_________________________Start Logo_________________________*/
+
+.startlogo {
+    margin-left: 1100px;
+    margin-top: 300px;
+    width: 400px;
+}
+
+/*_________________________Game Namer_________________________*/
+
+.gamename {
+    position: absolute;
+    font-size: 35px;
+    margin-left: 1115px;
+    margin-top: 600px;
+    font-weight: bold;
+    font-family: "Arial";
+    color: white;
+}
+
+/*_________________________My Name_________________________*/
+
+.dedun {
+    position: absolute;
+    font-size: 20px;
+    margin-left: 1110px;
+    margin-top: 645px;
+    font-weight: bold;
+    font-family: "Arial";
+    color: rgb(211, 248, 255);
+}
+
+/*_________________________Div Top Hidden_________________________*/
+
+.divtop {
+    visibility: hidden;
+}

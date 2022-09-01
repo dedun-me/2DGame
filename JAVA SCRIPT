@@ -1,0 +1,235 @@
+//___________________________Main Function___________________________
+
+
+var rs = new Audio("run.mp3");
+rs.loop = true;
+
+function m(event) {
+
+    if (event.which == 32) {
+
+        if (jw == 0) {
+
+            clearInterval(rw);
+            rs.pause();
+            jw = setInterval(jump, 100);
+            js.play();
+
+        }
+    }
+
+    if (event.which == 13) {
+
+        if (rw == 0) {
+            document.getElementById("divtop").style.visibility = "visible"
+            document.getElementById("score").style.visibility = "visible"
+            document.getElementById("help").style.visibility = "hidden";
+            rw = setInterval(run, 100);
+            rs.play();
+            pid = p();
+            bw = setInterval(b, 100);
+            w = setInterval(move, 100);
+            sw = setInterval(score, 100);
+        }
+    }
+}
+
+
+//___________________________Kunai___________________________
+
+var rs = new Audio("run.mp3");
+rs.loop = true;
+
+var pid = 0;
+var x = 1000;
+
+function p() {
+
+    for (var y = 0; y < 100; y++) {
+
+        var i = document.createElement("img");
+        i.src = "Kunai.png";
+        i.className = "i";
+        i.style.marginLeft = x + "px";
+
+        if (y < 10) {
+
+            x = x + 800;
+        }
+
+        if (y > + 11) {
+            x = x + 500;
+        }
+
+        i.id = "a" + y;
+
+        document.getElementById("d").appendChild(i);
+    }
+}
+
+//___________________________Ninja Run___________________________
+
+var rw = 0;
+var r = 1;
+
+function run() {
+    rs.play();
+
+    r = r + 1;
+
+    if (r == 11) {
+        r = 1;
+    }
+
+    document.getElementById("boy").src = "Run (" + r + ").png";
+
+}
+
+//___________________________Ninja Jump___________________________
+
+var jw = 0;
+var j = 1;
+var bmt = 365;
+var js = new Audio("jump.mp3");
+
+function jump() {
+
+    if (j <= 5) {
+
+        bmt = bmt - 30;
+
+    }
+
+    if (j >= 6) {
+
+        bmt = bmt + 30;
+    }
+
+    document.getElementById("boy").style.marginTop = bmt + "px";
+
+    j = j + 1;
+
+
+    if (j == 11) {
+
+        j = 1;
+        clearInterval(jw);
+        rw = setInterval(run, 100);
+        rs.play();
+        jw = 0;
+
+        if (pid == 0) {
+            pid = p();
+        }
+
+        if (bw == 0) {
+            bw = setInterval(b, 100);
+        }
+
+        if (w == 0) {
+            w = setInterval(move, 100);
+        }
+
+        if (sw == 0) {
+            sw = setInterval(score, 100);
+        }
+    }
+
+    document.getElementById("boy").src = "Jump (" + j + ").png";
+}
+
+//___________________________Background Move___________________________
+
+var bw = 0;
+var bm = 0;
+
+function b() {
+
+    bm = bm - 20;
+
+    document.getElementById("d").style.backgroundPositionX = bm + "px";
+}
+
+//___________________________Score Worker___________________________
+
+var w = 0;
+var sw = 0;
+var u = 0;
+
+function score() {
+    u = u + 10;
+    document.getElementById("score").innerHTML = u;
+
+}
+
+//___________________________Move Function___________________________
+
+function move() {
+
+    for (var y = 0; y < 100; y++) {
+        var z = getComputedStyle(document.getElementById("a" + y));
+        var p = parseInt(z.marginLeft);
+        p = p - 20;
+        document.getElementById("a" + y).style.marginLeft = p + "px";
+        //alert(p);
+
+
+        if (p >= 110 & p <= 180) {
+            if (bmt > 300) {
+                clearInterval(rw);
+                rw = -1;
+                rs.pause();
+                clearInterval(bw);
+                clearInterval(jw);
+                jw = -1;
+                clearInterval(w);
+                clearInterval(sw);
+                dw = setInterval(dead, 100);
+                ds.play();
+            }
+        }
+    }
+}
+
+//___________________________Dead__________________________
+
+var ds = new Audio("dead.mp3");
+var dw = 0;
+var d = 0;
+
+function dead() {
+    d = d + 1;
+    if (d == 11) {
+        d = 10;
+
+        document.getElementById("boy").style.marginTop = "365px";
+        document.getElementById("end").style.visibility = "visible";
+        document.getElementById("endscore").innerHTML = u;
+        document.getElementById("divtop").style.visibility = "hidden";
+        document.getElementById("score").style.visibility = "hidden";
+        document.getElementById("boy").style.visibility = "hidden";
+        document.getElementById("d").style.backgroundImage = "url('p1.png')";
+        document.getElementById("i").style.height = 0;
+
+    }
+
+
+
+
+    document.getElementById("boy").src = "Dead (" + d + ").png"
+
+}
+
+//___________________________Button___________________________
+
+function re() {
+    location.reload();
+}
+
+function startplay() {
+    document.getElementById("start").style.visibility = "hidden";
+    document.getElementById("help").style.visibility = "visible";
+}
+
+
+
